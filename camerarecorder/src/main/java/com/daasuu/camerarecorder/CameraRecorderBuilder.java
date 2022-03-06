@@ -6,6 +6,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.hardware.camera2.CameraManager;
 import android.opengl.GLSurfaceView;
+import android.os.Build;
 import android.util.Log;
 import android.view.Surface;
 
@@ -87,6 +88,9 @@ public class CameraRecorderBuilder {
         return this;
     }
 
+
+
+    
     public CameraRecorder build() {
         if (this.glSurfaceView == null) {
             throw new IllegalArgumentException("glSurfaceView and windowManager, multiVideoEffects is NonNull !!");
